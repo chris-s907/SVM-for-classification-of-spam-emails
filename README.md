@@ -36,7 +36,7 @@ of which the exponential is the squared Euclidean distance between two feature v
 
 $$ K({x}_{1},{x}_{2})={e}^{-\gamma {||{x}_{1}-{x}_{2}||}^{2}} $$
 
-$$ \gamma =\frac {1} {nfeatures*sigm{a}^{2}}=\frac {1} {nfeatures\ast \sigm {a}^{2}} $$
+$$ \gamma =\frac {1} {nfeatures*sigm{a}^{2}}=\frac {1} {57\ast \sigm {a}^{2}} $$
 
 * We can get the results of RBF method:
 
