@@ -34,7 +34,7 @@ We standardize the data by removing the mean value of each feature and then divi
  * RBF kernel is a type of non-linear kernel that maps data to a higher-dimensional feature space, where it can be more easily separable.  The RBF kernel is defined as formular 
 of which the exponential is the squared Euclidean distance between two feature vectors and 𝛾 is a scalar that defines how much influence a single training example. 
 
-$ K({x}_{1},{x}_{2})={e}^{-\gamma {||{x}_{1}-{x}_{2}||}^{2}} $
+$$ K({x}_{1},{x}_{2})={e}^{-\gamma {||{x}_{1}-{x}_{2}||}^{2}} $$
 
 $ \gamma =\frac {1} {nfeatures*sigm{a}^{2}}=\frac {1} {nfeatures\ast \sigm {a}^{2}} $
 
