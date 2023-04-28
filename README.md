@@ -8,7 +8,7 @@ We standardize the data by removing the mean value of each feature and then divi
 
 ## Compute discriminant function
  * Admissibility of the kernels
- We compute the Gram matrix with Mercer’s condition and calculate all the eigenvalues of the matrix. The matrix K contains some very small negative values. We set a very small negative value -10^{-4} as the threshold. As long as there is no eigenvalues smaller than it, then we believe the matrix is positive semi-definite and the kernel candidate is admissible which ensures that the SVM optimization problem is convex and has a unique global minimum. 
+ We compute the Gram matrix with Mercer’s condition and calculate all the eigenvalues of the matrix. The matrix K contains some very small negative values. We set a very small negative value $ {10}^{-4} $ as the threshold. As long as there is no eigenvalues smaller than it, then we believe the matrix is positive semi-definite and the kernel candidate is admissible which ensures that the SVM optimization problem is convex and has a unique global minimum. 
 
  * A hard-margin SVM with the linear kernel
  The margin with the linear kernel can separate two classes of data if and only if there exist a hyper plane which w is the weight vector and the b is the bias. In order to find an optimal hyper plane, we can apply the dual problem and use the KKT conditions. The object of our task :
@@ -16,12 +16,12 @@ We standardize the data by removing the mean value of each feature and then divi
  ![image1](figures/linear_kernel.png)
 
  * A hard-margin SVM with the polynomial kernel
- The hard-margin with a polynomial kernel K(x_1,x_2)={{(x_1}^Tx_2+1)}^P which p range from 2 to 5. Then we apply the KKT condition and reduce unknowns to form the dual problem:
+ The hard-margin with a polynomial kernel $ K({x}_{1},{x}_{2})={{({x}_{1}}^{T}{x}_{2}+1)}^{P} $ which p range from 2 to 5. Then we apply the KKT condition and reduce unknowns to form the dual problem:
 
   ![image2](figures/polynomial_kernel_hard.png)
 
  * A soft-margin SVM with the polynomial kernel
- All of other calculation steps are the same as 3.2 and the only difference is the boundary of \alpha. Value C reflects cost of violating constraints. A large C leads to smaller margin and fewer misclassification and a small C leads to larger margin and more misclassification of training data. According to the KKT condition and we can form the dual problem:
+ All of other calculation steps are the same as 3.2 and the only difference is the boundary of a. Value C reflects cost of violating constraints. A large C leads to smaller margin and fewer misclassification and a small C leads to larger margin and more misclassification of training data. According to the KKT condition and we can form the dual problem:
 
   ![image3](figures/polynomial_kernel_soft.png)
 
@@ -34,9 +34,9 @@ We standardize the data by removing the mean value of each feature and then divi
  * RBF kernel is a type of non-linear kernel that maps data to a higher-dimensional feature space, where it can be more easily separable.  The RBF kernel is defined as formular 
 of which the exponential is the squared Euclidean distance between two feature vectors and 𝛾 is a scalar that defines how much influence a single training example. 
 
-K(x_1,x_2)=e^{-\gamma{||x_1-x_2||}^2}
+$ K({x}_{1},{x}_{2})={e}^{-\gamma {||{x}_{1}-{x}_{2}||}^{2}} $
 
-\gamma=\frac{1}{nfeatures\ \ast\ \sigma^2}=\frac{1}{57\ \ast\ \sigma^2}
+$ \gamma =\frac {1} {nfeatures*sigm{a}^{2}}=\frac {1} {nfeatures\ast \sigm {a}^{2}} $
 
 * We can get the results of RBF method:
 
